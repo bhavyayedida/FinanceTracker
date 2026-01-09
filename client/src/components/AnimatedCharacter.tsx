@@ -270,7 +270,7 @@ export default function AnimatedCharacter({ showPassword, isTypingPassword, erro
         minHeight: "1.5em"
       }}>
         {shaking 
-          ? "Oops! Try again 😅"
+          ? "Oops! Try again :("
           : showPassword 
             ? "I'm not looking! 🙈" 
             : isTypingPassword 

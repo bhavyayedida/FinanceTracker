@@ -127,22 +127,6 @@ function Dashboard() {
             }}>
               Expense Tracker
             </p>
-            <div style={{ textAlign: "right", marginTop: "-3rem" }}>
-              <button
-                onClick={handleLogout}
-                style={{
-                  padding: "0.5rem 1rem",
-                  background: "#ef4444",
-                  color: "white",
-                  border: "none",
-                  borderRadius: "4px",
-                  cursor: "pointer",
-                  fontSize: "0.9rem"
-                }}
-              >
-                Logout
-              </button>
-            </div>
           </div>
 
           <div style={{

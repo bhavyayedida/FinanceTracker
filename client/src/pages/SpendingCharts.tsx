@@ -80,7 +80,7 @@ function SpendingCharts() {
   }).reverse();
 
   const dailyData = last30Days.map((date) => {
-    const dayExpenses = expenses.filter((t) => t.date === date);
+    const dayExpenses = expenses.filter((t) => t.date.split("T")[0] === date);
     const total = dayExpenses.reduce((sum, t) => sum + Number(t.amount), 0);
     return {
       date,
