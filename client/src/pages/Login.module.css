@@ -1,0 +1,315 @@
+.loginContainer {
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.loginContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/background.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.loginCard {
+  max-width: 1000px;
+  max-height: 90vh;
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #fef3c7 0%, #e0e7ff 100%);
+  max-height: 90vh;
+  min-height: 500px;
+}
+
+.imageSection {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  position: relative;
+  padding: 1rem;
+}
+
+.financeImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.rightSection {
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+
+.logoSection {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.logoIcon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+}
+
+.logoIcon svg {
+  width: 32px;
+  height: 32px;
+  fill: white;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.25rem;
+  color: #1e293b;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  text-align: center;
+  color: #64748b;
+}
+
+.loginForm {
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.errorMessage {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #fee2e2;
+  color: #dc2626;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-left: 4px solid #dc2626;
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.errorIcon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  background: white;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.passwordWrapper {
+  position: relative;
+}
+
+.passwordToggle {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.passwordToggle:hover {
+  color: #334155;
+}
+
+.passwordToggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+.submitButton {
+  margin-top: 0.5rem;
+  width: 100%;
+  padding: 0.875rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.submitButton:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.5);
+}
+
+.loadingSpinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  margin-right: 0.5rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.footer {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  margin-bottom: 0.75rem;
+}
+
+.toggleText {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.toggleLink {
+  color: #667eea;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s;
+  margin-left: 0.5rem;
+}
+
+.toggleLink:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .loginCard {
+    grid-template-columns: 1fr;
+  }
+  
+  .imageSection {
+    display: none;
+  }
+  
+  .leftSection {
+    padding: 2rem;
+  }
+  
+  .loginForm {
+    padding: 2rem 1.5rem;
+  }
+}
