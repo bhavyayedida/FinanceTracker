@@ -1,6 +1,9 @@
 # Finance Tracker
 A full-stack finance tracking application with AI-powered insights.
 
+## Live Demo
+https://github.com/bhavyayedida/FinanceTracker/blob/main/demo.mp4
+
 ## Features
 
 - 🔐 User authentication (Register/Login)
